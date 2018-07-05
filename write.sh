@@ -12,11 +12,11 @@ then
 fi
 while read line
 do
-	if [ $line == "quit" ]
+	if [ "$line" == "quit" ]
 	then 
-		echo $line > $FIFO
-		exit 1
+		echo "$line" > $FIFO
+		exit 0
 	else 
-		echo $lice > $FIFO
+		echo "$line" > $FIFO
 	fi		
 done
